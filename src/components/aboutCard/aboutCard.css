@@ -1,0 +1,82 @@
+h1 {
+    font-family: 'Roboto Condensed', 'Times New Roman';
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcomeconfetti p {
+    font-size: 2rem;
+    margin: 1.3rem 0;
+}
+
+.git-profile {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #0F084B;
+    width: 90%;
+    text-align: center;
+    border-radius: 20px 20px;
+}
+
+.git-avatar figure{
+    display: block;
+}
+
+.git-avatar img {
+    margin-top: 1.5rem;
+    border-radius: 75px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .git-profile{
+        margin-top: 20px;
+        width: 75%;
+    }
+
+    .git-avatar figure  {
+        width: 50%;
+    }
+
+    .git-avatar img {
+        width: 50%;
+    }
+
+    .git-description {
+        margin: 0 5rem 20px 5rem;
+    }
+
+    .welcomeconfetti p {
+        font-size: 2.5rem;
+        margin: 2rem 0 0.5rem 0;
+    }
+}
+
+@media (min-width: 1024px){
+    .git-profile{
+        flex-wrap: nowrap;
+        width: 90%
+    }
+
+    .git-description{
+        margin: 3rem 0.5rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+
+    .welcomeconfetti p {
+        margin: 2.5rem 0 1rem 0;
+    }
+}

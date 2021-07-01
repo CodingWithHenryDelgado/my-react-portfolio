@@ -1,0 +1,33 @@
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.portfolio-showcase {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.portfolio-header {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.portfolio-listing {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .portfolio-listing {
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .portfolio-header {
+        font-size: 2.4rem;
+    }
+}

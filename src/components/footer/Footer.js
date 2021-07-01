@@ -12,12 +12,21 @@ class Footer extends React.Component {
                 <div className='social-media'>
                     <h3>Social Media</h3>
                     <p>
-                    <a href="https://github.com/HenryDelGlitch" target="_blank" rel="noreferrer">
+                    <a 
+                        href="https://github.com/HenryDelGlitch" 
+                        target="_blank" 
+                        rel="noreferrer"
+                        aria-label="Github Page">
+
                         <i class="fab fa-github"></i>
                     </a>
                     </p>
                     <p>
-                    <a href="https://twitter.com/GlitchDel" target="_blank" rel="noreferrer">
+                    <a 
+                        href="https://twitter.com/GlitchDel" 
+                        target="_blank" 
+                        rel="noreferrer"
+                        aria-label="Twitter Page">
                         <i class="fab fa-twitter"></i>
                     </a>
                     </p>

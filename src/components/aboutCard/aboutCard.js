@@ -31,7 +31,7 @@ class AboutCard extends React.Component{
                 </div>
                 <div className="git-profile">
                     <figure className="git-avatar">
-                        <img src={this.state.avatar_url} alt="Github Avatar"/>
+                        <img src={this.state.avatar_url} alt="Github Avatar" width="300px" height="300px"/>
                     </figure>
                     <div className="git-description">
                         <h1>{this.state.name}</h1>

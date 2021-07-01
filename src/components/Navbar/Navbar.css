@@ -18,7 +18,7 @@
 }
 
 .navbar_name a {
-  color: #fff;
+  color: #0F084B;
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -39,14 +39,14 @@
 }
 
 .navbar_items a {
-  color: #FFF;
+  color: #0F084B;
   font-size: 1.5rem;
   text-decoration: none;
 }
 
 .navbar_items a:hover,
 .navbar_items a:active {
-  color: #151515;
+  color: #FFF;
 }
 
 @media (max-width: 768px) {

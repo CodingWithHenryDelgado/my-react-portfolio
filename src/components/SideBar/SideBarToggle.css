@@ -1,4 +1,4 @@
-.sidebarToggle {
+.sidebarButton {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -10,7 +10,7 @@
     width: 30px;
 }
 
-.sidebarToggle:focus {
+.sidebarButton:focus {
     outline: none;
 }
 

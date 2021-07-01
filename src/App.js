@@ -1,12 +1,14 @@
-import Navbar from './components/Navbar/Navbar'
-import Footer from './components/footer/Footer';
-import AboutCard from './components/aboutCard/aboutCard';
-import PortfolioListing from './components/portfolioListings/portfolioListings'
-import SideBar from './components/SideBar/SideBar';
-import Backdrop from './components/Backdrop/Backdrop';
 import Confetti from 'react-confetti';
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import './App.css';
+const Navbar = lazy(() => import('./components/Navbar/Navbar'));
+const Footer = lazy(() => import('./components/footer/Footer'));
+const AboutCard = lazy(() => import('./components/aboutCard/aboutCard'));
+const PortfolioListing = lazy(() => import('./components/portfolioListings/portfolioListings'));
+const SideBar = lazy(() => import('./components/SideBar/SideBar'));
+const Backdrop = lazy(() => import('./components/Backdrop/Backdrop'));
+const renderLoader = () => <p>Loading</p>;
+
 
 class App extends React.Component {
   constructor(props){
@@ -37,17 +39,19 @@ class App extends React.Component {
     }
 
     return (
-      <div className="App" style={{height: '100%'}}>
-        <Navbar handleSideBarToggle={this.handleSideBarToggle}/>
-        <SideBar show={this.state.sideBarOpen}/>
-        {backDrop}
-        <main style={{marginTop: '60px'}}>
-          <Confetti tweenDuration={500} recycle={false} config={{ spread: 360 }} style={{marginTop: 60}}/>
-          <AboutCard src={this.state.avatar_url}/>
-          <PortfolioListing />
-          <Footer />
-        </main>
-      </div>
+      <Suspense fallback={renderLoader()}>
+        <div className="App" style={{height: '100%'}}>
+          <Navbar handleSideBarToggle={this.handleSideBarToggle}/>
+          <SideBar show={this.state.sideBarOpen}/>
+          {backDrop}
+          <main style={{marginTop: '60px'}}>
+            <Confetti tweenDuration={500} recycle={false} config={{ spread: 360 }} style={{marginTop: 60}}/>
+            <AboutCard src={this.state.avatar_url}/>
+            <PortfolioListing />
+            <Footer />
+          </main>
+        </div>
+      </Suspense>
     );
   }
 }

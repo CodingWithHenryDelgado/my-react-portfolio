@@ -9,12 +9,6 @@ class PortfolioListing extends React.Component{
                 <p className="portfolio-header"><strong>Portfolio</strong></p>
                 <div className="portfolio-listing">
                     <Portfolio 
-                        name={'ravenous'}
-                        description={'This is a Yelp like Clone using React and Yelp API'}
-                        languages={'React, HTML, CSS, Javascript'}
-                        code={'https://github.com/HenryDelGlitch/ravenous'}
-                        html={'https://ravenous.website/'}/>
-                    <Portfolio 
                         name={'Inspirational Journal'}
                         description={'A journal that shows you the weather and an inspirational quote!'}
                         languages={'React, Redux, CSS'}
